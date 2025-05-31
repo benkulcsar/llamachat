@@ -1,0 +1,25 @@
+version: "3.9"
+services:
+  ollama:
+    volumes:
+      - ollama:/root/.ollama
+    container_name: ollama
+    image: ollama/ollama:0.9.0
+    ports: 
+      - 11434:11434
+    networks:
+      - llamanet
+  llamachat:
+    container_name: llamachat
+    depends_on:
+      - ollama
+    tty: true
+    image: llamachat
+    networks:
+      - llamanet
+    volumes:
+      - ./src:/app/src
+volumes:
+  ollama:
+networks:
+  llamanet:
