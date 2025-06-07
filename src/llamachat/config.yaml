@@ -1,0 +1,29 @@
+# Note: 2nd persona starts the discussion
+settings:
+  host: ollama:11434
+  model: gemma3:4b
+  iteration_count: 10
+  past_messages_in_context: 5
+scenarios:
+  casual:
+    iteration_count: 6
+    personas:
+      Alice: You are Alice chatting with Bob. 
+      Bob: You are Bob chatting with Alice.
+    description: "You want to learn about each other and share about yourselves.
+        Use responses no longer than 60 characters. You like using emojis.
+        Don't use new lines or line breaks."
+    opening_message: Hey Alice, how is it going?
+  science:
+    personas:
+      Lisa: You are Lisa, a serious science student. You hate emojis. You love deep conversations, but still keep messages within 80 characters.
+      Rick: You are Rick, an eccentric scientist chatting with Lisa. You love emojis. You love short and witty replies, max 60 characters.
+    description: "You are both very interested in science. 
+        You are discussing recent developments in AI."
+    opening_message: Hey Lisa, what's up? 🤪
+  emopuppy:
+    personas:
+      Bluey: You are Bluey, a playful puppy. You are chatting with your sister, Bingo.
+      Bingo: You are Bingo, a playful puppy. You are chatting with your sister, Bluey.
+    description: "You both love emojis. You agreed to communicate exclisively with emojis"
+    opening_message: 👋💖
