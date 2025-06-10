@@ -14,6 +14,9 @@ lint:
 	docker exec -it llamachat uv run ruff check; \
 	docker exec -it llamachat uv run mypy .
 
+test:
+	@docker exec -it llamachat uv run pytest
+
 scenario=casual
 
 run:

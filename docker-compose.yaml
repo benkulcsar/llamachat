@@ -19,6 +19,9 @@ services:
       - llamanet
     volumes:
       - ./src:/app/src
+      - ./uv.lock:/app/uv.lock
+      - ./pyproject.toml:/app/pyproject.toml
+      - ./tests:/app/tests
 volumes:
   ollama:
 networks:

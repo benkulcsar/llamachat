@@ -24,6 +24,15 @@ make run
 make down
 ```
 
+## Development
+
+Run lint (runs black and mypy too) and tests:
+
+```shell
+make lint
+make test
+```
+
 ## Scenarios
 
 ### Puppies and Emojis
